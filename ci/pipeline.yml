@@ -60,6 +60,7 @@ jobs:
 - name: deploy-review
   plan:
   - get: pal-tracker
+    passed: [build]
   - get: pal-tracker-artifacts
     trigger: true
     passed: [build]
