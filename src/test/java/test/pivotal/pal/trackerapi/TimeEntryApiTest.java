@@ -60,7 +60,7 @@ public class TimeEntryApiTest {
         assertThat(createJson.read("$.hours", Long.class)).isEqualTo(8);
     }
 
-    //@Test
+    @Test
     public void testList() throws Exception {
         Long id = createTimeEntry();
 
@@ -79,7 +79,7 @@ public class TimeEntryApiTest {
         assertThat(readId).isEqualTo(id);
     }
 
-    //@Test
+    @Test
     public void testRead() throws Exception {
         Long id = createTimeEntry();
 
@@ -96,7 +96,7 @@ public class TimeEntryApiTest {
         assertThat(readJson.read("$.hours", Long.class)).isEqualTo(8);
     }
 
-    //@Test
+    @Test
     public void testUpdate() throws Exception {
         Long id = createTimeEntry();
         TimeEntry updatedTimeEntry = new TimeEntry(2, 3, LocalDate.parse("2017-01-09"), 9);
@@ -115,7 +115,7 @@ public class TimeEntryApiTest {
         assertThat(updateJson.read("$.hours", Long.class)).isEqualTo(9);
     }
 
-   // @Test
+    @Test
     public void testDelete() throws Exception {
         Long id = createTimeEntry();
 
